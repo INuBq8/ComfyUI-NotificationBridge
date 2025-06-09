@@ -11,7 +11,6 @@ These nodes act as **bridges** between processing steps and the final output (li
 
 - 📲 **WhatsApp Notifications (Twilio Sandbox)**
 - 💬 **Discord Channel Alerts (Webhook-based)**
-- 🧩 Modular and extendable — more channels planned!
 
 ---
 
