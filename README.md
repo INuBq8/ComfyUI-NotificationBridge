@@ -1,7 +1,9 @@
-# 🔔 ComfyUI Notification
+# 🔔 ComfyUI NotificationBridge
 
-A lightweight notification system for [ComfyUI](https://github.com/comfyanonymous/ComfyUI).  
+A lightweight **notification bridge system** for [ComfyUI](https://github.com/comfyanonymous/ComfyUI).  
 Send alerts when a workflow completes — currently supports WhatsApp notifications via Twilio and Discord webhooks.
+
+These nodes act as **bridges** between processing steps and the final output (like `[Save Image]`), making them easy to integrate at the tail end of any image pipeline.
 
 ---
 
@@ -9,6 +11,7 @@ Send alerts when a workflow completes — currently supports WhatsApp notificati
 
 - 📲 **WhatsApp Notifications (Twilio Sandbox)**
 - 💬 **Discord Channel Alerts (Webhook-based)**
+- 🧩 Modular and extendable — more channels planned!
 
 ---
 
@@ -18,7 +21,7 @@ After installing, two new nodes will appear in the ComfyUI node menu under **Not
 
 ### 📲 WhatsApp (Twilio) & 💬 Discord Notify
 
-These nodes are designed to **act as a bridge** between your image decoder and the final output step — such as `[Save Image]`.
+These nodes are designed to **act as bridges** between your decoder and the output step — such as `[Save Image]`.
 
 For example:
 
@@ -33,22 +36,22 @@ For example:
 Use this node to send a message to a Discord channel via webhook.
 
 **Inputs:**
-- `img`: connect it between `[VAE Decode]` and `[Save Image]`
-- `message`: the text message to send
+- `img`: bridge input from upstream (e.g., `[VAE Decode]`)
+- `message`: text to send
 - `webhook_url`: Discord channel webhook URL
 
 ---
 
 ### 📲 WhatsApp (Twilio)
-Use this node to send a WhatsApp message via Twilio's API.
+Use this node to send a WhatsApp message via Twilio’s API.
 
 **Inputs:**
-- `img`: bridge image output to downstream nodes
+- `img`: bridge input to maintain image flow
 - `message`: message text
 - `sid`: Twilio Account SID
 - `token`: Twilio Auth Token
 - `from_number`: `whatsapp:+14155238886` (Twilio Sandbox)
-- `to_number`: your WhatsApp number (must join sandbox)
+- `to_number`: your verified WhatsApp number
 
 ---
 
@@ -56,23 +59,23 @@ Use this node to send a WhatsApp message via Twilio's API.
 
 Clone this repo into your ComfyUI `custom_nodes` folder:
 
-```
-git clone https://github.com/Waheed-Mousad/ComfyUI_Notification.git
+```bash
+git clone https://github.com/Waheed-Mousad/ComfyUI-NotificationBridge.git
 ```
 
-If you're using WhatsApp (Twilio), install the required package:
+If you're using WhatsApp (Twilio), install the required Python package:
 
-```
-pip install -r custom_nodes/ComfyUI_Notification/requirements.txt
+```bash
+pip install -r custom_nodes/ComfyUI-NotificationBridge/requirements.txt
 ```
 
 ---
 
 ## 🧪 Notes
 
-This was my first custom node — built on the fly as a learning project.  
-Apologies if parts seem unpolished. Feedback and improvements are welcome!
+This is my first custom ComfyUI node — built on the fly as a learning hobby project.  
+Feedback and ideas for improvement are welcome!
 
 ---
 
-MIT Licensed – use freely, and improve it however you'd like.
+MIT Licensed – use freely and build on it.
