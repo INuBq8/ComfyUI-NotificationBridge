@@ -63,6 +63,7 @@ git clone https://github.com/INuBq8/ComfyUI-NotificationBridge.git
 ```
 
 If you're using WhatsApp (Twilio), install the required Python package in the requirements.txt
+Comfy should do this automatically on startup so you  don't need to worry most of the times
 ---
 
 ## 🧪 Notes

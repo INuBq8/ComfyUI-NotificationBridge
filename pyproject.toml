@@ -1,0 +1,13 @@
+[project]
+name = "comfyui-notificationbridge"
+description = "Send notifications when a workflow completes. Acts as a bridge node before Save Image."
+version = "1.0.0"
+license = "MIT License"
+
+[project.urls]
+Repository = "https://github.com/INuBq8/ComfyUI-NotificationBridge"
+
+[tool.comfy]
+PublisherId = "INuBq8"
+DisplayName = "ComfyUI-NotificationBridge"
+Icon = ""
