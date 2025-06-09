@@ -59,15 +59,10 @@ Use this node to send a WhatsApp message via Twilio’s API.
 Clone this repo into your ComfyUI `custom_nodes` folder:
 
 ```bash
-git clone https://github.com/Waheed-Mousad/ComfyUI-NotificationBridge.git
+git clone https://github.com/INuBq8/ComfyUI-NotificationBridge.git
 ```
 
-If you're using WhatsApp (Twilio), install the required Python package:
-
-```bash
-pip install -r custom_nodes/ComfyUI-NotificationBridge/requirements.txt
-```
-
+If you're using WhatsApp (Twilio), install the required Python package in the requirements.txt
 ---
 
 ## 🧪 Notes
