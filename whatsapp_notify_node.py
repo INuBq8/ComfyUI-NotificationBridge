@@ -3,14 +3,15 @@ class WhatsAppNotifyNode:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "message": ("STRING", {"default": "✅ Workflow complete!"}),
+                "img": ("IMAGE",),
+                "message": ("STRING", {"default": "✅ Workflow completed!"}),
             }
         }
 
-    RETURN_TYPES = ()  # No outputs
+    RETURN_TYPES = ("IMAGE",)
     FUNCTION = "notify"
     CATEGORY = "Notifications"
 
-    def notify(self, message: str):
+    def notify(self, img, message: str):
         print(f"[📲 WhatsAppNotifyNode] Message to send: {message}")
-        return ()
+        return (img,)  # Pass image forward so node isn't "useless"
