@@ -1,9 +1,9 @@
-from .whatsapp_notify_node import WhatsAppNotifyNode
+from .notify_whatsapp_twilio import WhatsAppNotifyNodeTwilio
 
 NODE_CLASS_MAPPINGS = {
-    "WhatsAppNotifyNode": WhatsAppNotifyNode,
+    "WhatsAppNotifyNodeTwilio": WhatsAppNotifyNodeTwilio,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "WhatsAppNotifyNode": "📲 WhatsApp Notify",
+    "WhatsAppNotifyNodeTwilio": "📲 WhatsApp (Twilio)",
 }
